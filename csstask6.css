@@ -1,0 +1,262 @@
+*{
+		position: 0px;
+		margin: 0px;
+	}
+	body{
+		background-color: #979A9A;
+	}
+
+	.head{
+		background-color: #5F6A6A;
+		height: 60px;
+		padding: 10px;
+	}
+	.head h1{
+		display: inline;
+		font-family: 'Bangers', cursive;
+        font-family: 'Dancing Script', cursive;
+		color: white;
+		padding: 16px;
+	}
+	.head h2{
+		color: #D0D3D4;
+		font-family: 'Dancing Script', cursive;
+		margin-left: 65%;
+	}
+	.contentment{
+		display: inline-block;
+		position: relative;
+		background-color: #F0F3F4;
+		top: 30px;
+		left: 200px;
+		width: 100px;
+		height: 100px;
+		animation-name: redisplay;
+		animation-duration: 1s;
+		animation-fill-mode: forwards;
+	}
+	.img{
+		display: inline-block;
+		position: absolute;
+		top: 10%;
+		left: 10%;
+		animation-name: img;
+		animation-duration: 1s;
+		animation-fill-mode: forwards;
+	}
+
+	.review_box {
+        width: 320px;
+        height: 100px;
+        position: absolute;
+        left: 120px;
+        bottom: 80px;
+    }
+    .review_link {
+          display: flex;
+          align-items: center;
+          position: absolute;
+          bottom: 0px;
+          animation: link 1s  forwards;
+          animation-delay: 1.2s;
+          opacity: 0;
+
+    }
+        
+      
+    .review_link a {
+         margin-left: 25px;
+         font-family: 'Poppins', sans-serif;
+         text-decoration: none;
+         color: #1A5276;
+         font-weight: bold;
+         font-size: 15px;
+         
+
+    }
+
+
+    .review_link a i{
+    	font-size: 19px;
+    }
+
+
+
+    .review_link a:hover{
+        color:#212F3C;
+        
+    }
+
+    .container1 {
+  width: 0px;
+  height: 430px;
+  background: #BDC3C7;
+  display: inline-flex;
+  align-items: center;
+  position: absolute;
+  left: 0px;
+  top: 50px;
+  justify-content: center;
+  animation: container1 1s cubic-bezier(.74, .06, .4, .92) forwards;
+}
+
+.container2 {
+  width: 80%;
+  height: 80%;
+  display: inline-flex;
+  flex-direction: column;
+  justify-content: space-between;
+  animation: container2 1s ease-in-out forwards;
+  animation-delay: 1s;
+  opacity: 0;
+}
+
+.container_box {
+  width: 100%;
+  color: black;
+}
+
+.container_box h2 {
+  font-size: 32px;
+  font-family: 'Poppins', sans-serif;
+  color: black;
+}
+          
+.container_box p {
+  margin-top: 20px;
+  font-size: 16px;
+ font-family: 'Lato';
+  color: black;
+  font-style: bold;
+  text-align: justify;
+}
+
+.button {
+  width: 200px;
+  height: 200px;
+  bottom: 50px;
+  right: -50px;
+  position: absolute;
+}
+
+.button .btn {
+  width: 60px;
+  height: 60px;
+  font-size: 8px;
+  font-weight: bold;
+  font-family: 'Poppins', sans-serif;
+  transition: ease-in-out 220ms;
+  cursor: pointer;
+}
+
+.button .wish {
+  border: 2px solid #AF7AC5;
+   color:  #AF7AC5;
+   position: absolute;
+   bottom: 0;
+   left: 0;
+   opacity: 0;
+   animation: wish 1s  forwards;
+   animation-delay: 1s;
+   background-color: white;
+}
+.button .buy{
+  border: none;
+  background:#AF7AC5;
+  color: white;
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  opacity: 0;
+  animation: buy 1s forwards;
+ animation-delay: 1s;
+}
+
+.product p {
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  display: flex;
+  z-index: 2;
+  margin-left: 15px;
+}
+
+
+
+	@keyframes redisplay{
+		0%{
+			opacity: 0;
+		}
+		100%{
+			opacity: 1;
+			width: 700px;
+		    height: 470px;
+		}
+	}
+	@keyframes img{
+		0%{
+			opacity: 0;
+			height: 40px;
+		    width: 70px;
+		}
+		100%{
+			opacity: 1;
+			width: 400px;
+			height: 300px;
+		}
+	}
+
+	@keyframes link {
+        0% {
+          opacity: 0;
+          bottom: -80px;
+        }
+        100% {
+          opacity: 1;
+          bottom: 0px;
+        }
+    }
+
+    @keyframes container1 {
+  0% {
+    width: 0px;
+    left: 550px;
+  }
+  100% {
+    width: 500px;
+    left: 550px;
+    opacity: 0.9;
+  }
+}
+
+@keyframes container2 {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes wish{
+  0% {
+    opacity: 0;
+    bottom: -25px;
+  }
+  100% {
+    opacity: 0.7;
+    bottom: 0px;
+  }
+}
+
+@keyframes buy {
+  0% {
+    opacity: 0;
+    bottom: -25px;
+  }
+  100% {
+    opacity: 0.7;
+    bottom: 0px;
+  }
+}
+
